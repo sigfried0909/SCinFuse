@@ -1,0 +1,244 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Style/index.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="index.php">
+                    <img src="/Style/Images/SCinFuse.png" width="90" />
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav list-unstyled">
+                    <li class="button button1">
+                        <a href="Storyboard.php">Storyboard</a>
+                    </li>
+                    <li class="button button2">
+                        <a href="Simulations.php">Simulations</a>
+                    </li>
+                    <li class="button button3">
+                        <a href="Lectures.php">Lectures</a>
+                    </li>
+                    <li class="button button4">
+                        <a href="Modules.php">Modules</a>
+                    </li>
+                </ul>
+                <ul class="account list-unstyled">
+                    <li>
+                        <a1>
+                            Welcome <?php echo $_SESSION['username']; ?>
+                        </a1>
+                    </li>
+                    <li class="button button17">
+                        <a href="index.php?logout='1'" style="color: red;">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio4" />
+
+                <div class="slide first">
+                    <img src="/Style/Images/earth.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="/Style/Images/biology.png" />
+                </div>
+                <div class="slide">
+                    <img src="/Style/Images/chemistry.png" />
+                </div>
+                <div class="slide">
+                    <img src="/Style/Images/physics.jpg" />
+                </div>
+                <div class="navigation-auto">
+                    <div class="auto-btn1">
+                        <label for="radio1" class="manual-btn"></label>
+                    </div>
+                    <div class="auto-btn2">
+                        <label for="radio2" class="manual-btn"></label>
+                    </div>
+                    <div class="auto-btn3">
+                        <label for="radio3" class="manual-btn"></label>
+                    </div>
+                    <div class="auto-btn4">
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ``
+    </div>
+
+    <div class="welcome-text">
+        <h1>Welcome to SCinFuse!</h1>
+        <p>The most exciting learning management system that fuse your minds into more exciting lessons</p>
+    </div>
+    <a class="button button9" href="Storyboard.php">Start Learning</a>
+
+    <div class="row">
+        <div class="column">
+            <h2>
+                <b>Watch our lectures</b>
+            </h2>
+            <div class="videos">
+                <div class="lectures">
+                    <img src="/Style/Images/Earth logo.png" /><a button class="button button5" href="/Lectures/Earth Science/Earth Science Lectures.php">
+                        <b>Earth Science</b>
+                    </a>
+                </div>
+                <div class="lectures">
+                    <img src="/Style/Images/Biology logo.png" /><a button class="button button6" href="/Lectures/Biology/Biology Lectures.php">
+                        <b>Biology</b>
+                    </a>
+                </div>
+                <div class="lectures">
+                    <img src="/Style/Images/Chemistry logo.png" /><a button class="button button7" href="/Lectures/Chemistry/Chemistry Lectures.php">
+                        <b>Chemistry</b>
+                    </a>
+                </div>
+                <div class="lectures">
+                    <img src="/Style/Images/Physics logo.png" /><a button class="button button8" href="/Lectures/Physics/Physics Lectures.php">
+                        <b>Physics</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-video">
+            <h2>
+                <b>Introducing SCinFuse</b>
+            </h2>
+            <video controls>
+                <source src="/Style/Images/SCinFuse.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <button id="btn" onclick='recognition.start()' class="button button10">
+        <img src="/Style/Images/microphone.png" width="90" height="80" />Talk to Scientia
+    </button>
+
+    <script src="/Style/Javascript/Voice Command.js"></script>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <h1>About Us</h1>
+            <p>
+                <img src="/Style/Images/SCinFuse.png" width="70" /><img src="/Style/Images/Lagro.png" width="70" />
+            </p>
+            <p>
+                &copy; <script>document.write(new Date().getFullYear())</script> SCinFuse | Lagro High School. All rights reserved.
+            </p>
+            <p>Address: Misa de Gallo St., cor. Ascension Ave., Brgy. Greater Lagro, Quezon City</p>
+            <p>Contact:</p>
+        </div>
+
+        <div class="footer-right">
+            <h1>Visit Us</h1>
+            <div class="logo">
+                <div style="display:flex; flex-wrap:wrap">
+                    <a href="https://fb.com" style="text-decoration:none;border:0;width:40px;height:40px;padding:2px;margin:5px;color:#ffffff;border-radius:50%;background-color:#07182b;">
+                        <svg class="niftybutton-facebook" style="display:block;fill:currentColor" data-tag="fac" data-name="Facebook" viewbox="0 0 512 512" preserveaspectratio="xMidYMid meet">
+                            <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="acknowledgements">
+            <h1>Acknowledgements</h1>
+            <div class="acknowledgements-contents">
+                <div class="logo">
+                    <a href="https://fb.com">
+                        <img src="/Style/Images/dostlogo.png" width="40" />
+                    </a>
+                </div>
+                <div class="vline"></div>
+                <div class="acknowledgements-text">
+                    <ul style="list-style-type:none;">
+                        <li>
+                            <b>Department of Science and Technology</b>
+                        </li>
+                    </ul>
+                    <ul style="list-style-type:none;">
+                        <li>
+                            <i>Creators:</i>
+                        </li>
+                    </ul>
+                    <ul style="list-style-type:none;">
+                        <li>
+                            Sigmund F. Breton (<i>Lead Developer / Physics</i>)
+                        </li>
+                        <li>
+                            Dranreb B. Biso (<i>Earth Science</i>)
+                        </li>
+                        <li>
+                            Alberto T. Cestona Jr. (<i>Biology</i>)
+                        </li>
+                        <li>
+                            Angelica Irish P. Matira (<i>Chemistry / Mathematics</i>)
+                        </li>
+                    </ul>
+                </div>
+                <div class="special">
+                    <ul style="list-style-type:none;">
+                        <li>
+                            <i>Special Thanks:</i>
+                        </li>
+                    </ul>
+                    <ul style="list-style-type:none;">
+                        <li>
+                            Sigfried F. Breton (<i>Developer</i>)
+                        </li>
+                        <li>
+                            Eloida Mae G. Domingo (<i>Illustrator</i>)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Style/Javascript/Slideshow.js"></script>
+
+</body>
+</html>

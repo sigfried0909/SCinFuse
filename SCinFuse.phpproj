@@ -1,0 +1,151 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>SCinFuse</Name>
+    <ProjectGuid>{b7b389b7-a7e6-4bdd-96ff-58dec23a44df}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{73520F3B-57D4-4D7D-8280-D81F0A3C992B};{349C5851-65DF-11DA-9384-00065B846F21};{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <EnvName>PHPDev</EnvName>
+    <RuntimeVersion>7.3</RuntimeVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\DEVSENSE\PHP Tools\VS$(VisualStudioVersion)\Devsense.PHP.MsWebApplication.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Compile Include="errors.php" />
+    <Compile Include="index.php" />
+    <Compile Include="Lectures.php" />
+    <Compile Include="Lectures\Biology\Biology Lectures.php" />
+    <Compile Include="Lectures\Chemistry\Chemistry Lectures.php" />
+    <Compile Include="Lectures\Earth Science\Earth Science Lectures.php" />
+    <Compile Include="Lectures\Physics\Physics Lectures.php" />
+    <Compile Include="login.php" />
+    <Compile Include="Modules.php" />
+    <Compile Include="Modules\Biology\Biology Modules.php" />
+    <Compile Include="Modules\Chemistry\Chemistry Modules.php" />
+    <Compile Include="Modules\Earth Science\Earth Science Modules.php" />
+    <Compile Include="Modules\Physics\Physics Modules.php" />
+    <Compile Include="register.php" />
+    <Compile Include="server.php" />
+    <Compile Include="Simulations.php" />
+    <Compile Include="Simulations\Physics\Ohm%27s Law\Ohm%27s Law.php" />
+    <Compile Include="Storyboard.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lectures\" />
+    <Folder Include="Lectures\Biology\" />
+    <Folder Include="Lectures\Biology\Videos\" />
+    <Folder Include="Lectures\Chemistry\" />
+    <Folder Include="Lectures\Chemistry\Videos\" />
+    <Folder Include="Lectures\Earth Science\" />
+    <Folder Include="Lectures\Earth Science\Videos\" />
+    <Folder Include="Lectures\Physics\" />
+    <Folder Include="Lectures\Physics\Videos\" />
+    <Folder Include="Modules\" />
+    <Folder Include="Modules\Biology\" />
+    <Folder Include="Modules\Biology\Materials\" />
+    <Folder Include="Modules\Biology\Materials\Images\" />
+    <Folder Include="Modules\Chemistry\" />
+    <Folder Include="Modules\Chemistry\Materials\" />
+    <Folder Include="Modules\Chemistry\Materials\Images\" />
+    <Folder Include="Modules\Earth Science\" />
+    <Folder Include="Modules\Earth Science\Materials\" />
+    <Folder Include="Modules\Earth Science\Materials\Images\" />
+    <Folder Include="Modules\Physics\" />
+    <Folder Include="Modules\Physics\Materials\" />
+    <Folder Include="Modules\Physics\Materials\Images\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Simulations\" />
+    <Folder Include="Simulations\Biology\" />
+    <Folder Include="Simulations\Chemistry\" />
+    <Folder Include="Simulations\Earth Science\" />
+    <Folder Include="Simulations\Physics\" />
+    <Folder Include="Simulations\Physics\Ohm%27s Law\" />
+    <Folder Include="Storyboard\" />
+    <Folder Include="Storyboard\Biology\" />
+    <Folder Include="Storyboard\Chemistry\" />
+    <Folder Include="Storyboard\Earth Science\" />
+    <Folder Include="Storyboard\Physics\" />
+    <Folder Include="Style\" />
+    <Folder Include="Style\Images\" />
+    <Folder Include="Style\Javascript\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lectures\Earth Science\Videos\Weathering.mp4" />
+    <None Include="Properties\PublishProfiles\pupdps.com - Web Deploy.pubxml" />
+    <Content Include="Simulations\Physics\Ohm%27s Law\p5.js" />
+    <Content Include="Simulations\Physics\Ohm%27s Law\p5.sound.min.js" />
+    <Content Include="Simulations\Physics\Ohm%27s Law\sketch.js" />
+    <Content Include="Style\Images\1.jpg" />
+    <Content Include="Style\Images\Biology logo.png" />
+    <Content Include="Style\Images\biology.png" />
+    <Content Include="Style\Images\Chemistry logo.png" />
+    <Content Include="Style\Images\chemistry.png" />
+    <Content Include="Style\Images\Cover.jpg" />
+    <Content Include="Style\Images\dostlogo.png" />
+    <Content Include="Style\Images\Earth logo.png" />
+    <Content Include="Style\Images\earth.jpg" />
+    <Content Include="Style\Images\Lab.jpg" />
+    <Content Include="Style\Images\Lagro.png" />
+    <Content Include="Style\Images\microphone.png" />
+    <Content Include="Style\Images\Ohm%27s Law.jpg" />
+    <Content Include="Style\Images\Physics logo.png" />
+    <Content Include="Style\Images\physics.jpg" />
+    <Content Include="Style\Images\River canyon.jpg" />
+    <Content Include="Style\Images\SCinFuse.mp4" />
+    <Content Include="Style\Images\SCinFuse.png" />
+    <Content Include="Style\Images\The Living Legacy.jpg" />
+    <Content Include="Style\index.css" />
+    <Content Include="Style\Javascript\Slideshow.js" />
+    <Content Include="Style\Javascript\Voice Command.js" />
+  </ItemGroup>
+</Project>
