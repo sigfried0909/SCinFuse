@@ -47,22 +47,6 @@ The project won 1st Place in the Educational Category and became a major milesto
 
 ---
 
-## Installation
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/yourusername/scinfuse.git
-```
-
-2. Open the project directory
-
-3. Configure the database settings
-
-4. Run the project on a local server
-
----
-
 ## Future Improvements
 
 - Enhanced UI/UX design
