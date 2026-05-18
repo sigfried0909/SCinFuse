@@ -2,7 +2,7 @@
 
 ScinFuse is an educational science website developed for a DOST website development competition. The platform was created to provide interactive and accessible science learning materials for students.
 
-🏆 1st Place — Educational Category, DOST Website Development Competition
+1st Place — Educational Category, DOST Website Development Competition
 
 This project was my first experience in website development and became the foundation of my interest in software and web technologies.
 
